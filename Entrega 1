@@ -1,0 +1,80 @@
+**ENTREGA PREVIA 1 SEMANA 3**
+
+Estudiante
+Cristhian Yezzid Pizza Correa
+Código: 100288216
+
+
+
+Tutor: Ignacio Blanco
+
+
+
+POLITÉCNICO GRANCOLOMBIANO
+INGENIERIA DE SOFTWARE
+ARQUITECTURA DEL COMPUTADOR
+BOGOTÁ
+2022
+
+
+**Contenido**
+-Algoritmo
+-Instrucciones para solución del problema
+
+
+
+**Algoritmo**
+De acuerdo con la solicitud relacionada en la actividad de la semana 3 se debe generar un algoritmo que dé solución al problema: “Determinar si un número es primo o no”, para está actividad he decidido crear el algoritmo en el lenguaje de programación Java.
+
+
+public static void main(String[] args) throws IOException {
+    Main.numeroPrimo();
+}
+
+public static void numeroPrimo() throws IOException {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Ingresar un número");
+    int entrada = Integer.parseInt(reader.readLine());
+    int primo = 0;
+    for(int i = 1; i <= entrada; i++) {
+        if (entrada % i == 0) {
+            primo++;
+        }
+    }
+    if (primo == 2) {
+        System.out.println("El número " + entrada + " es primo");
+    }else {
+        System.out.println("El número " + entrada + " no es primo");
+    }
+}
+
+
+**Instrucciones para solucionar el problema**
+
+Además, es necesario añadir una serie de instrucciones indicando el paso a paso para la solución del problema planteado “Determinar si un número es primo o no”.
+
+1.	El programa (el código sobre el que se generó el algoritmo), recibe de entrada un valor, este valor debe ser un número entero.
+BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Ingresar un número");
+int entrada = Integer.parseInt(reader.readLine());
+
+2.	Se trabajará con un ciclo for para realizar las diferentes iteraciones de acuerdo con el valor de entrada
+for(int i = 1; i <= entrada; i++
+
+3.	Se añadió un condicional if dentro del ciclo for para validar el valor del residuo de la división, esta validación se hace entre el valor ingresado y el número de la iteración que esta inicializada en 1.
+if (entrada % i == 0)
+
+4.	Además, se añadió una variable que aumentará estará inicializada en 0 (hace el papel de contador), y aumentará su valor cada vez que el residuo sea 0 (esto sucederá dos veces ya que si el número es primo solo se podrá dividir por 1 y por sí mismo)
+int primo = 0;
+
+primo++;
+
+5.	Luego, se añadió un condicional if para validar si la variable contadora tiene un valor igual a 2, si esto es así imprimirá la respuesta indicando que el número ingresado es un número primo. 
+if (primo == 2) {
+    System.out.println("El número " + entrada + " es primo");
+}
+
+6.	Finalmente se añadió un else para cerrar el programa, este else se ejecutará solo si el valor de la variable contadora es diferente a 2, e imprimirá la respuesta que indica que el número ingresado no es un número primo.
+else {
+    System.out.println("El número " + entrada + " no es primo");
+}
